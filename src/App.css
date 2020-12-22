@@ -1,7 +1,15 @@
+li {
+  list-style: none;
+}
+
 .data-display {
   display: flex;
 }
 
 .data-section {
   width: 700px;  
+}
+
+.flag {
+  width: 50px;
 }

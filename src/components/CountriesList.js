@@ -24,15 +24,4 @@ class CountriesList extends React.Component {
   }
 }
 
-// const CountriesList = (props) => {
-
-//   const countries = props.countries.map((country) => {
-//     return <div key={country.name}>
-//       <li>{country.name}</li>
-//     </div>
-//   })
-
-//   return <div>{countries}</div>
-// }
-
 export default CountriesList;

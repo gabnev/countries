@@ -20,6 +20,7 @@ class App extends React.Component {
 
   selectedCountry = async (selectedCountry) => {
 
+    // I tried to filter out the first null return here
     if(selectedCountry !== null) {
 
       const response = await country.get(`${selectedCountry}`)
@@ -42,7 +43,17 @@ class App extends React.Component {
             <CountriesList onClick={this.selectedCountry} countries={this.state.countries} />
           </ul>
           <div className="data-section">
-            Data section
+            {this.state.country.map((data) => (
+              <div key={data.name}>
+                <ul>
+                  <li><img className="flag" src={data.flag} alt="flag"/></li>
+                  <li>Name: {data.name}</li>
+                  <li>Population: {data.population}</li>
+                  <li>Region: {data.region}</li>
+                  <li>Subregion: {data.subregion}</li>
+                </ul>
+              </div>
+            ))}
           </div>
         </div>
       </div>
